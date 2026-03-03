@@ -35,7 +35,7 @@ while True:
         continue
 
 
-    # Check for commands
+    
     if user_input.lower() == "exit":
         print(f"\n{Fore.BLUE} Exiting sentiment spy Goodbye, Mr. {user_name}! 😊{Style.RESET_ALL}")
         break
@@ -70,7 +70,7 @@ while True:
         continue
 
 
-    # Analyze sentiment
+    
     polarity = TextBlob(user_input).sentiment.polarity
     if polarity > 0.25:
         sentiment_type = "Positive"
@@ -86,11 +86,11 @@ while True:
         emoji = "😭"
 
 
-    # Store in history
+
     conversation_history.append((user_input, polarity, sentiment_type))
 
 
-    # Print result with color, emojis, and polarity
+   
     print(f"{color}{emoji} {sentiment_type} sentiment found from your sentence! "
         f"Polarity: {polarity:.2f}")
 
