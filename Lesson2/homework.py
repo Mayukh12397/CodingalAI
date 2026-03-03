@@ -11,7 +11,7 @@ colorama.init()
 
 print(f"{Fore.RED}  Welcome to Sentiment Spy! {Style.RESET_ALL}")
 
-user_name = input(f"{Fore.BLUE}Please enter your name: {Style.RESET_ALL}").strip()
+user_name = input(f"{Fore.BLUE}Kindly enter your name: {Style.RESET_ALL}").strip()
 if not user_name:
     user_name = "Mr. Mysterious"  
 
@@ -20,7 +20,7 @@ if not user_name:
 conversation_history = []
 
 
-print(f"\n{Fore.CYAN}Hello, Agent {user_name}!")
+print(f"\n{Fore.CYAN}Hello, Mr. {user_name}!")
 print(f"Care to write a sentence and you will see textblob analyze the polarity of your sentence and spy your sentiments. ")
 print(f"Type {Fore.GREEN}reset{Fore.CYAN}, {Fore.YELLOW}history{Fore.RED}, "
     f"or {Fore.YELLOW}exit{Fore.CYAN} to quit.{Style.RESET_ALL}\n")
@@ -37,13 +37,13 @@ while True:
 
     # Check for commands
     if user_input.lower() == "exit":
-        print(f"\n{Fore.BLUE} Exiting Sentiment Spy. Farewell, Agent {user_name}! 😊{Style.RESET_ALL}")
+        print(f"\n{Fore.BLUE} Exiting sentiment spy Goodbye, Mr. {user_name}! 😊{Style.RESET_ALL}")
         break
 
 
     elif user_input.lower() == "reset":
         conversation_history.clear()
-        print(f"{Fore.CYAN} All conversation history cleared!{Style.RESET_ALL}")
+        print(f"{Fore.CYAN} All conversation history cleared!!{Style.RESET_ALL}")
         continue
 
 
@@ -91,6 +91,6 @@ while True:
 
 
     # Print result with color, emojis, and polarity
-    print(f"{color}{emoji} {sentiment_type} sentiment detected! "
+    print(f"{color}{emoji} {sentiment_type} sentiment found from your sentence! "
         f"Polarity: {polarity:.2f}")
 
