@@ -48,9 +48,9 @@ predictions = model.predict(x_test)
 
 
 # Display the first image and prediction
-plt.imshow(x_test[0], cmap=plt.cm.binary)
+plt.imshow(x_test[0], cmap=plt.cm.binary) # First image corresponds to 7 so it predict 7. For graph, use plt, plt is used to represent graph.
 plt.title(f"Predicted: {predictions[0].argmax()}")
 plt.show()
 
-
+# this is a simple neural network to predict handwritten digits using mnist dataset and kesar library from tensorflow.
 
