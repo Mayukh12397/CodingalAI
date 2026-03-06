@@ -1,0 +1,7 @@
+Pseudo Steps
+1. Load the dataset
+2. Ask user for name, genre, mood, optional rating.
+3. Analyze mood polarity using textblob library.
+4. Recommend movies 
+5. Display the result
+6. loop for more recommendations until user says no
