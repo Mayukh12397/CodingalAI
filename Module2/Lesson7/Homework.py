@@ -14,7 +14,7 @@ resizedImage2 = cv2.resize(image, size2)
 resizedImage3 = cv2.resize(image, size3)
 
 # display the resized images
-cv2.imshow("Resized Image 1 (800x500)", resizedImage1)
+cv2.imshow("Resized Image 1 (800x500)", resizedImage1) 
 cv2.imshow("Resized Image 2 (400x300)", resizedImage2)
 cv2.imshow("Resized Image 3 (224x224)", resizedImage3)
 
