@@ -1,6 +1,3 @@
-# Basics of Image Manipulation
-# Cropping, Rotating and Brightness Adjustment
-
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
@@ -8,7 +5,7 @@ import numpy as np
 
 image = cv2.imread('example.jpg')
 
-# Convert BGR to RGB for displaying
+
 imageRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 plt.imshow(imageRGB)
@@ -25,8 +22,6 @@ plt.title("Cropped Image")
 plt.show()
 
 
-
-#  Rotate the Image
 (h, w) = image.shape[:2]
 
 center = (w//2, h//2)
@@ -42,7 +37,6 @@ plt.title("Rotated Image (90 degrees)")
 plt.show()
 
 
-# Increase Brightness
 brightnessMatrix = np.ones(image.shape, dtype="uint8") * 90
 
 brighterImage = cv2.add(image, brightnessMatrix)
