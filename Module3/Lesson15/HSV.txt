@@ -1,0 +1,12 @@
+WHAT IS HSV?
+An HSV color filter is a way to select or change colors in an image based on how humans naturally describe color.
+Instead of using the usual RGB (Red, Green, Blue), it uses HSV, which stands for:
+Hue (H) → the type of color (red, blue, green, etc.)
+Saturation (S) → how strong or dull the color is.
+Value (V) → how bright or dark the color is.
+
+WHAT IS CONTOUR?
+A contour is just the outline (boundary) of an object in an image.
+It can be understood like:
+Drawing a line around an object
+Like tracing the edges of a shape.
