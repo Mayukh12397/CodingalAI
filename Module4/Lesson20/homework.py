@@ -4,11 +4,11 @@ import random
 import html
 
 
-# Education-focused categories (General Knowledge, Science, History, etc.)
-EDUCATION_CATEGORY_ID = 19 # General Knowledge category (most educational)
+
+EDUCATION_CATEGORY_ID = 17
 
 
-API_URL = f"https://opentdb.com/api.php?amount=10&category={EDUCATION_CATEGORY_ID}&type=multiple"
+API_URL = f"https://opentdb.com/api.php?amount=7&category={EDUCATION_CATEGORY_ID}&type=boolean"
 
 
 
@@ -31,32 +31,30 @@ def run_quiz():
     print("Welcome to the Education Quiz!\n")
 
 
-    for i, q in enumerate(questions, 1): # i represents the question number and q rspresents the main question data. enumerate loops through the list and thats why it is used.
-        # Decode HTML entities and prepare options
-        question = html.unescape(q['question']) # unescape function will convert the text into readable format.( for example, if there are some special characters, it will removie it and make it easier to be read.)
+    for i, q in enumerate(questions, 1):  
+        question = html.unescape(q['question']) 
         correct = html.unescape(q['correct_answer'])
         incorrects = [html.unescape(a) for a in q['incorrect_answers']]
-        # Create and shuffle options
+       
         options = incorrects + [correct]
-        random.shuffle(options)
+        
 
 
-        # Display question
+       
         print(f"Question {i}: {question}")
-        for idx, option in enumerate(options, 1): # enumerate will loop through the 4 options in a specified format startign from 1.
+        for idx, option in enumerate(options, 1): 
             print(f"  {idx}. {option}")
-        # Get and validate answer
+       
         while True:
             try:
-                choice = int(input("\nYour answer (1-4): "))
-                if 1 <= choice <= 4:
+                choice = int(input("\nYour answer (1-2): "))
+                if 1 <= choice <= 2:
                     break
             except ValueError:
                 pass
-            print("Invalid input! Please enter 1-4")
+            print("Invalid input! Please enter 1-2")
 
 
-        # Check answer
         if options[choice-1] == correct:
             print("✓ Correct!\n")
             score += 1
